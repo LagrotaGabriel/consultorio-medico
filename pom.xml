@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.11</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.lagrota</groupId>
+    <artifactId>consultorio</artifactId>
+    <version>1.0.0</version>
+    <name>consultorio</name>
+    <description>Sistema de gerenciamento de médicos de consultório médico</description>
+    <url>https://github.com/LagrotaGabriel/consultorio-medico</url>
+    <packaging>pom</packaging>
+
+    <developers>
+        <developer>
+            <id>LagrotaGabriel</id>
+            <name>Gabriel Henrique Afonso Cruz Lagrota</name>
+            <email>gabriellagrota23@gmail.comm</email>
+            <url>https://github.com/LagrotaGabriel</url>
+            <roles>
+                <role>Developer</role>
+                <role>Project Lead</role>
+            </roles>
+            <timezone>-3</timezone>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <modules>
+        <module>consulta</module>
+        <module>medico</module>
+        <module>paciente</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.parent.groupId}</groupId>
+                <artifactId>consulta</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.parent.groupId}</groupId>
+                <artifactId>paciente</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.parent.groupId}</groupId>
+                <artifactId>medico</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
