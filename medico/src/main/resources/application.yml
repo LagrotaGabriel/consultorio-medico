@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: medico
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/medico
+server:
+  port: 8020
