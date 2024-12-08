@@ -3,6 +3,6 @@ spring:
     name: medico
   data:
     mongodb:
-      uri: mongodb://localhost:27017/medico
+      uri: mongodb://admin:admin@localhost:27017/medico?authSource=admin
 server:
   port: 8020
