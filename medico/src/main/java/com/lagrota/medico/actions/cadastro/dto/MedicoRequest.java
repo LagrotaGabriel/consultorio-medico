@@ -1,4 +1,4 @@
-package com.lagrota.medico.adapters.in.controller.request;
+package com.lagrota.medico.actions.cadastro.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

@@ -1,9 +1,7 @@
-package com.lagrota.medico.adapters.in.controller;
+package com.lagrota.medico.actions.cadastro.controller;
 
-import com.lagrota.medico.adapters.in.controller.mapper.MedicoMapper;
-import com.lagrota.medico.adapters.in.controller.request.MedicoRequest;
-import com.lagrota.medico.application.core.domain.Medico;
-import com.lagrota.medico.application.ports.in.CadastraMedicoInputPort;
+import com.lagrota.medico.actions.cadastro.dto.MedicoRequest;
+import com.lagrota.medico.actions.cadastro.services.CadastraMedicoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,14 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/medico")
 public class MedicoController {
 
-    private final CadastraMedicoInputPort cadastraMedicoInputPort;
-    private final MedicoMapper medicoMapper;
+    private final CadastraMedicoService cadastraMedicoService;
 
     @PostMapping
     public ResponseEntity<Void> cadastra(@RequestBody @Valid MedicoRequest medicoRequest) {
 
-        Medico medico = medicoMapper.geraMedico(medicoRequest);
-        cadastraMedicoInputPort.cadastra(medico);
+        cadastraMedicoService.cadastra(medicoRequest);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

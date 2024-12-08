@@ -1,4 +1,4 @@
-package com.lagrota.medico.adapters.out.repository.entity;
+package com.lagrota.medico.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * @since 19/11/2024 - 11:18
  */
 @Data
-@Document(collation = "medico")
+@Document(collation = "medico", collection = "medico")
 public class MedicoEntity {
 
     @Id

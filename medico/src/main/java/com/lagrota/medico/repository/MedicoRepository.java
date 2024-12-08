@@ -1,6 +1,6 @@
-package com.lagrota.medico.adapters.out.repository;
+package com.lagrota.medico.repository;
 
-import com.lagrota.medico.adapters.out.repository.entity.MedicoEntity;
+import com.lagrota.medico.entity.MedicoEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
